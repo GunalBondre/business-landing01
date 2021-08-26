@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Landing Page</title>
+		<!-- this is title tag used to give title to page -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/bfebcc5893.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- get the fontawesome cdn url from fontawesome.com -->
+
+		<link rel="stylesheet" href="./style.css" />
+		<!-- external style sheet is included using above command -->
+	</head>
+	<body>
+		<!-- for navigation purpose -->
+		<nav class="navbar">
+			<ul class="nav-items">
+				<li class="nav-links logo"><a href="#">Logo</a></li>
+				<li class="nav-links theme-button"><a href="#">Sign Up</a></li>
+				<!-- we can use multiple casses but not ids id should be unique -->
+			</ul>
+		</nav>
+		<main class="mainContainer">
+			<!-- hero section starts -->
+			<section class="hero-section">
+				<div class="hero-section-content">
+					<h1 class="title1">
+						Generate more leads with a professional landing page!
+					</h1>
+					<!-- form is used to create form there are different input values for text email password that we can use to get user input -->
+					<form action="" method="post">
+						<input
+							type="email"
+							name="email"
+							placeholder="Email Address"
+							id=""
+							required
+						/>
+						<!-- required field makes it mandatory -->
+						<button class="theme-button">Submit</button>
+						<!-- both buttons are same so we can use same class to avoid repeatation of code -->
+					</form>
+				</div>
+			</section>
+			<!-- end of hero section -->
+
+			<!-- feature section starts -->
+			<section class="features section-padding">
+				<div class="feature-wrapper">
+					<div class="feature-image">
+						<img src="./images/window.svg" alt="" />
+					</div>
+					<div class="feature-heading">
+						<h2 class="title2">Fully Responsive</h2>
+					</div>
+					<div class="feature-content">
+						<p class="para">
+							This theme will look great on any device, no matter the size!
+						</p>
+					</div>
+				</div>
+				<div class="feature-wrapper">
+					<div class="feature-image">
+						<img src="./images/layers.svg" alt="" />
+					</div>
+					<div class="feature-heading">
+						<h2 class="title2">Bootstrap 5 Ready</h2>
+					</div>
+					<div class="feature-content">
+						<p class="para">
+							This theme will look great on any device, no matter the size!
+						</p>
+					</div>
+				</div>
+				<div class="feature-wrapper">
+					<div class="feature-image">
+						<img src="./images/terminal.svg" alt="" />
+					</div>
+					<div class="feature-heading">
+						<h2 class="title2">Easy to Use</h2>
+					</div>
+					<div class="feature-content">
+						<p class="para">
+							This theme will look great on any device, no matter the size!
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- end of feature section -->
+
+			<!-- grid section starts -->
+			<section class="grid-section">
+				<div class="grid-section-wrapper">
+					<div class="grid-container grid-content grid1">
+						<h2 class="title2">Fully Responsive Design</h2>
+						<p class="para">
+							When you use a theme created by Start Bootstrap, you know that the
+							theme will look great on any device, whether it's a phone, tablet,
+							or desktop the page will behave responsively!
+						</p>
+					</div>
+					<div class="grid-container grid2">
+						<img src="./images/bg-showcase-1.jpg" alt="" />
+					</div>
+					<div class="grid-container grid3">
+						<img src="./images/bg-showcase-2.jpg" alt="" />
+					</div>
+					<div class="grid-container grid-content grid4">
+						<h2 class="title2">Updated For Bootstrap 5</h2>
+						<p class="para">
+							Newly improved, and full of great utility classes, Bootstrap 5 is
+							leading the way in mobile responsive web development! All of the
+							themes on Start Bootstrap are now using Bootstrap 5!
+						</p>
+					</div>
+					<div class="grid-container grid-content grid5">
+						<h2 class="title2">Easy to Use & Customize</h2>
+						<p class="para">
+							Newly improved, and full of great utility classes, Bootstrap 5 is
+							leading the way in mobile responsive web development! All of the
+							themes on Start Bootstrap are now using Bootstrap 5!
+						</p>
+					</div>
+					<div class="grid-container grid6">
+						<img src="./images/bg-showcase-3.jpg" alt="" />
+					</div>
+				</div>
+			</section>
+			<!-- end of grid section -->
+
+			<!-- testomonial section -->
+			<section class="testomonials section-padding">
+				<h2 class="title2">What people are saying</h2>
+
+				<div class="testomonials-wrapper">
+					<div class="testomonial">
+						<img src="./images/testimonials-1.jpg" alt="" />
+						<h3 class="title3">Margaret E.</h3>
+						<p class="para">"This is fantastic! Thanks so much guys!"</p>
+					</div>
+					<div class="testomonial">
+						<img src="./images/testimonials-2.jpg" alt="" />
+						<h3 class="title3">Fred S.</h3>
+						<p class="para">
+							"Bootstrap is amazing. I've been using it to create lots of super
+							nice landing pages."
+						</p>
+					</div>
+					<div class="testomonial">
+						<img src="./images/testimonials-3.jpg" alt="" />
+						<h3 class="title3">Sarah W.</h3>
+						<p class="para">
+							"Thanks so much for making these free resources available to us!"
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- testomonial section ends -->
+
+			<!-- CTA -->
+
+			<section class="cta section-padding">
+				<h2 class="title2">Ready to get started? Sign up now!</h2>
+				<form action="">
+					<input type="email" name="" placeholder="Email Address" id="" />
+					<button type="submit" class="theme-button">Sign Up</button>
+				</form>
+			</section>
+		</main>
+		<footer class="footer section-padding">
+			<div class="footer-links">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Termas of use</a></li>
+					<li><a href="#">Privacy policy</a></li>
+				</ul>
+			</div>
+			<div class="social-links">
+				<i class="fab fa-facebook"></i>
+				<i class="fab fa-twitter-square"></i>
+				<i class="fab fa-instagram"></i>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,481 @@
+/* lets write basic styles */
+/*   * is universal selector applies to all elements in html page  */
+/* margin and padding are used to create space  */
+/* margin usually creates space outside element boundry hile padding creates inside element boundry */
+/* browser applies basic margin and padding so we are clearing it here we will apply our own */
+/* google for border box property to learn more */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+
+/* as we said earlier 1rem = 16px we are rounding it to 10px */
+
+html {
+	font-size: 62.5%;
+}
+
+/* there are various font families search google fonts it just define the text structure */
+body {
+	font-family: "Lato", sans-serif;
+}
+
+/* variable declaration */
+/* it is good practice to declare variables for colors instead of hard coding it */
+/* in css we declare variables in :root selector */
+
+:root {
+	--lightgray: #f8f9fa;
+	--white: #fff;
+	--button-color: #0d6efd;
+	--blue-overlay: #697c97;
+}
+
+a {
+	color: #000;
+}
+.section-padding {
+	padding: 6rem 0;
+	/* to give the top bottom padding between sections */
+}
+
+img {
+	width: 100%;
+	/* this will make images responsive to parent div */
+}
+
+/* lets style navbar */
+/* we have not included style file in html lets include */
+.navbar {
+	width: 100%;
+	background-color: var(--lightgray);
+}
+.navbar .nav-items {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 10rem;
+	align-items: center;
+	/* align items vertically centers the element */
+	/* instead of writing we use short property if we want to apply different padding to top-bottom and left-right*/
+	padding: top right bottom left;
+	/* lets see padding usage 2rem = 20px it applied padding from top left bottm and right */
+}
+
+.navbar .nav-items .nav-links {
+	font-size: 1.8rem;
+}
+.navbar .nav-items .logo {
+	font-size: 2rem;
+}
+.theme-button {
+	padding: 1.5rem;
+	background-color: var(--button-color);
+	border-radius: 5px;
+	border: none;
+	/* border radius property used to style border of element */
+}
+.navbar .nav-items .theme-button a {
+	color: var(--white);
+}
+
+/* main styles */
+.mainContainer {
+	width: 100%;
+	height: auto;
+	/* 100vh means the entire page height */
+}
+
+/* hero section styles */
+
+.hero-section {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom, var(--blue-overlay), transparent),
+		url(./images/bg-image-1.jpg) no-repeat center;
+	/* we used linear gradiant to give little black overlay */
+}
+.title1 {
+	font-size: 4.2rem;
+	color: var(--white);
+}
+.hero-section-content {
+	/* 	display: flex; align element side by side we can choose direction using flex-direction */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* horizontally centers element */
+	align-items: center;
+	/* vertically centers element but only when display is flex */
+	height: 100vh;
+}
+form {
+	width: 45%;
+	padding: 1rem;
+	text-align: center;
+}
+.title2 {
+	font-size: 3rem;
+}
+.para {
+	font-size: 1.8rem;
+	line-height: 1.5;
+	font-weight: 300;
+}
+.hero-section-content .title1 {
+	max-width: 46rem;
+	text-align: center;
+	padding: 1.5rem 0;
+	letter-spacing: 1.2px;
+	/* letter-spacing used to give space between letters */
+}
+
+.hero-section-content input {
+	padding: 2rem;
+	width: 65%;
+	margin-right: 2rem;
+	/* margin increases outer distance */
+	border-radius: 5px;
+	border: none;
+}
+
+form .theme-button {
+	width: 20%;
+	color: var(--white);
+	font-size: 1.6rem;
+	padding: 2rem;
+	/* padding increases inner height on x and y direction */
+}
+/* hero section style ends */
+
+/* feature section starts */
+
+.features {
+	width: 80%;
+	display: flex;
+	margin: 0 auto;
+	padding: 8rem 0;
+	/* it horizontally centers element  when you specify a width */
+}
+
+.features .feature-wrapper {
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem 2rem;
+}
+
+.feature-wrapper .feature-image,
+.feature-heading,
+.feature-content {
+	text-align: center;
+}
+
+.feature-heading {
+	font-size: 2rem;
+	padding: 1.5rem;
+}
+
+.feature-content {
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+.feature-image img {
+	width: 100%;
+	max-width: 5rem;
+}
+/* end of feature section */
+
+/* grid section */
+/* we will use grid to style thi layout */
+.grid-section {
+	width: 100%;
+	height: auto;
+}
+
+.grid-section-wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/* this will place 2 grids on one row and repeat the same till all grids are placed */
+}
+
+.grid-section-wrapper .grid-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	padding: 0 10rem;
+}
+.grid-content .title2 {
+	padding-bottom: 1rem;
+}
+/* we will make heading and para styles global so we dont have to repeat it again and again */
+
+/* end of grid section */
+
+/* testomonial section */
+.testomonials {
+	width: 100%;
+	height: auto;
+	padding: 06 6rem;
+	background-color: var(--lightgray);
+}
+.testomonials .testomonials-wrapper {
+	display: flex;
+	justify-content: space-evenly;
+}
+.testomonial img {
+	width: 100%;
+	max-width: 15rem;
+	border-radius: 50%;
+	/* to make a circle just apply border-radius to 50% and give equal width and height */
+}
+.testomonial {
+	width: 33%;
+	text-align: center;
+}
+.testomonials .title2 {
+	text-align: center;
+	padding: 3rem 0;
+}
+.title3 {
+	font-size: 2.4rem;
+}
+.testomonial .title3 {
+	padding: 1.5rem 0;
+}
+
+.testomonial .para {
+	max-width: 30rem;
+	margin: 0 auto;
+}
+/* end of testomonial section */
+
+/* cta */
+
+.cta {
+	width: 100%;
+	background: linear-gradient(to bottom, var(--blue-overlay), transparent),
+		url(./images/bg-image-1.jpg) no-repeat center;
+	height: 40rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.cta h2 {
+	color: var(--white);
+	padding-bottom: 1.5rem;
+}
+
+.cta input {
+	padding: 2rem;
+	width: 65%;
+	margin-right: 2rem;
+	border-radius: 5px;
+	border: none;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+	margin: 0 auto;
+	height: 10rem;
+	align-items: center;
+}
+.footer-links {
+	width: 80%;
+}
+.footer ul {
+	display: flex;
+	width: 50%;
+	justify-content: space-around;
+}
+.footer ul li a {
+	font-size: 1.8rem;
+	color: var(--button-color);
+}
+
+.social-links {
+	display: flex;
+	width: 20%;
+	justify-content: space-around;
+}
+.social-links i {
+	font-size: 3.5rem;
+	color: var(--button-color);
+}
+/* main style end */
+
+/* lets check for responsiveness */
+
+@media (max-width: 1200px) {
+	form {
+		width: 50%;
+	}
+	form .theme-button {
+		width: 25%;
+	}
+	.footer ul {
+		width: 75%;
+	}
+}
+
+@media (max-width: 991px) {
+	form {
+		width: 65%;
+	}
+	.grid-section-wrapper .grid-content {
+		padding: 3rem;
+	}
+	.features .feature-wrapper {
+		width: auto;
+	}
+
+	.features {
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 767px) {
+	form {
+		width: 100%;
+	}
+	.grid-section-wrapper {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.grid-section {
+		padding: 3rem;
+	}
+	.grid-section-wrapper .grid-content {
+		text-align: center;
+	}
+	.grid1 {
+		order: 0;
+	}
+	.grid2 {
+		order: 1;
+	}
+	.grid3 {
+		order: 3;
+	}
+	.grid4 {
+		order: 2;
+	}
+	.grid5 {
+		order: 5;
+	}
+	.grid6 {
+		order: 6;
+	}
+
+	/* order property decides at which order the perticular grid appears */
+	.testomonial {
+		width: auto;
+	}
+	.testomonials .testomonials-wrapper {
+		flex-wrap: wrap;
+		padding: 2rem;
+	}
+
+	.footer {
+		width: 100%;
+
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.footer-links {
+		width: 100%;
+	}
+	.footer ul {
+		width: 100%;
+		padding-bottom: 2rem;
+	}
+	.social-links {
+		width: 100%;
+	}
+	.hero-section-content {
+		height: auto;
+	}
+	.hero-section {
+		height: auto;
+		padding: 4rem 2rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.section-padding {
+		padding: 3rem 0;
+	}
+	.cta input {
+		width: 100%;
+	}
+	.footer form .theme-button {
+		width: 100%;
+		margin-top: 2rem;
+	}
+	.cta h2 {
+		text-align: center;
+	}
+	.hero-section-content {
+		height: auto;
+	}
+	.hero-section {
+		height: auto;
+		padding: 4rem 2rem;
+	}
+	.title1 {
+		font-size: 3rem;
+	}
+	.hero-section-content .title1 {
+		max-width: 32rem;
+	}
+	.hero-section-content input {
+		width: 100%;
+	}
+	form .theme-button {
+		width: 100%;
+		margin-top: 2rem;
+	}
+	.grid-section {
+		padding: 0;
+	}
+	.title2 {
+		font-size: 2.8rem;
+	}
+	.footer ul {
+		flex-direction: column;
+		text-align: center;
+	}
+	.footer {
+		height: auto;
+	}
+	.social-links {
+		flex-direction: column;
+		text-align: center;
+	}
+	.social-links i {
+		padding-bottom: 1rem;
+		font-size: 4rem;
+	}
+	.footer ul li {
+		padding-bottom: 1rem;
+	}
+	.footer ul li a {
+		font-size: 2.2rem;
+	}
+	.navbar .nav-items {
+		padding: 2rem;
+	}
+}
+
+/* thanks for watching */
+/* please subscribe for more tutorials */
+/* bye---- */
